@@ -560,7 +560,7 @@
       Find the 6 matching pairs hidden in the cards!
     </em>
   </p>
-  <button class="btn btn-primary" onclick="startGame()">▶ MULAI GAME</button>
+  <button class="btn btn-primary" id="startBtn">MULAI GAME</button>
 </section>
 
 <!-- ══════════════════ GAME ══════════════════ -->
@@ -741,6 +741,7 @@ function show(id){
 
 /* ══════════ START GAME ══════════ */
 function startGame(){
+  document.getElementById("startBtn").addEventListener("click", startGame);
   moves = 0; matched = 0; flipped = []; locked = false;
   elapsedSeconds = 0;
   clearInterval(timerInterval);
